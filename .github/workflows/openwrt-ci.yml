@@ -47,6 +47,8 @@ jobs:
           sudo -E apt-get -y autoremove --purge
           sudo -E apt-get clean
           
+          df -h
+          
       - name: 源码同步
         run: |
           git remote add openwrt https://github.com/coolsnowwolf/lede.git
@@ -72,7 +74,7 @@ jobs:
           # ln -s /mnt/openwrt/feeds ./feeds
           # ln -s /mnt/openwrt/staging_dir ./staging_dir
 
-          df -h
+          
 
       - name: Update feeds
         run: |
